@@ -47,7 +47,7 @@ int main()
            cout << "UNKNOWN INPUT\n";
   return (0);
 
-    case 3;
+    case 3:
     \
    cout << " Base and Height of Triangle";
        cin >> B >> H;
