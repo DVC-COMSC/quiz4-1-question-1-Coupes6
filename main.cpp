@@ -1,11 +1,12 @@
-// Complete this program
+#include <iomanip>
 
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
 {
-	int choice;
+	int number;
 	double width, height, radius;
 	double area;
 
@@ -14,12 +15,59 @@ int main()
 	cout << "\t2. Calculate the Area of Rectangle\n";
 	cout << "\t3. Calculate the Area of Triangle\n";
 	cout << "\t4. Quit\n\n";
-	cout << "Enter your choice (1-4): ";
-	cin >> choice;
+	cout << "Enter your number (1-4): ";
+	cin >> number;
 
-        //************************
-        // Your code 
-        //************************
+  if ((number < 0) || (number >= 5)) {
+    cout << "UNKNOWN INPUT\n";
+  }
+  
+    double rad, pi = 3.14159;
+    double L, W;
+    double B,H;
+  switch (number) {
+    case 1:
+    cout<< " Radius Of Circle:";
+    cin >> radius;
+      if (radius < 0)
+      cout << "UNKNOWN INPUT\n";
+          else
+     area = pi * pow(radius, 2);
+    cout << setprecision(2)<< fixed;
+    cout <<"AREA:" << area << endl;
+        return (0);
+
+    case 2:
+    cout << " Length and Width of Rectangle:";
+     cin>> L >> W ;
+    area = L* W;
+          if (area > 0)
+    cout << "AREA:" << area << endl;
+         else
+           cout << "UNKNOWN INPUT\n";
+  return (0);
+
+    case 3:
+    \
+   cout << " Base and Height of Triangle";
+       cin >> B >> H;
+  area = B * H * 0.5;
+        if ( area > 0)
+     cout << "AREA:" << area << endl;
+    else
+           cout << "UNKNOWN INPUT\n";
+    return (0);
+
+    case 4:
+    cout << "PROGRAM STOP";
+     return (0);
+
+    
+  }
         
-        cout << area << endl;
+  
+  
+  
+  
+  
 }
